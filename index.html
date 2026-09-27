@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>One Thing — Do one thing. Every day.</title>
+  <meta name="description" content="A focus app that removes decision fatigue. One goal. One timer. One streak." />
+  <meta name="theme-color" content="#F7F5F0" />
+  <meta property="og:title" content="One Thing — Do one thing. Every day." />
+  <meta property="og:description" content="A focus app that removes decision fatigue. One goal. One timer. One streak." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" type="image/png" href="assets/favicon-64.png" />
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Lets CSS start headlines "sunk" only when JS will reveal them. -->
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+<body>
+  <!-- ======================================================= NAV -->
+  <header class="nav">
+    <a class="wordmark" href="#top" aria-label="One Thing — home">
+      <svg class="mark" viewBox="0 0 24 24" aria-hidden="true">
+        <circle cx="12" cy="12" r="9.5" fill="none" stroke="currentColor" stroke-width="2" />
+        <path d="M9 7.5h6M12 7.5v9M9 16.5h6" stroke="currentColor" stroke-width="2" fill="none" />
+      </svg>
+      One Thing
+    </a>
+    <nav class="nav-links mono" aria-label="Sections">
+      <a href="#how">How it works</a>
+      <a href="#philosophy">Philosophy</a>
+      <a href="#waitlist">iPhone</a>
+    </nav>
+    <a class="btn btn-dark btn-sm" href="#download">Download <span class="sq" aria-hidden="true">↓</span></a>
+  </header>
+
+  <main id="top">
+    <!-- ===================================================== 1. HERO (light) -->
+    <section class="section light hero" aria-labelledby="hero-title">
+      <div class="bars" aria-hidden="true">
+        <i style="--h:34%"></i><i style="--h:22%"></i><i style="--h:48%"></i><i style="--h:64%"></i>
+        <i style="--h:30%"></i><i style="--h:62%"></i><i style="--h:40%"></i><i style="--h:26%"></i>
+      </div>
+
+      <div class="wrap hero-inner">
+        <span class="tag"><span class="tag-dot" aria-hidden="true"></span>One Thing</span>
+
+        <h1 id="hero-title" class="headline" data-reveal="hero">
+          <span class="line">Do one thing.</span>
+          <span class="line">Every day.</span>
+        </h1>
+
+        <div class="hero-foot">
+          <div class="actions">
+            <a class="btn btn-dark" href="#download">Download for Mac <span class="sq" aria-hidden="true">↓</span></a>
+            <a class="btn btn-outline" href="#waitlist">Join iOS Waitlist</a>
+          </div>
+          <p class="aside">A focus app that removes decision fatigue. One goal. One timer. One streak.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================== 2. HOW IT WORKS (dark) -->
+    <section id="how" class="section dark" aria-labelledby="how-title">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="tag"><span class="num">02</span> · How it works</span>
+          <span class="rule" aria-hidden="true"></span>
+        </div>
+
+        <div class="head-grid">
+          <p class="aside aside-left">Three steps a day. Nothing to configure, nothing to optimise.</p>
+          <h2 id="how-title" class="headline" data-reveal>
+            <span class="line">Set it. Start it.</span>
+            <span class="line">Stick with it.</span>
+          </h2>
+        </div>
+
+        <div class="cards">
+          <article class="card reveal">
+            <figure class="shot">
+              <div class="shot-bar" aria-hidden="true"><i></i><i></i><i></i></div>
+              <img src="assets/screens/set-your-goal.webp" width="1200" height="1200" loading="lazy" decoding="async"
+                   alt="One Thing's Weekly tab: a checklist for the week with today's step, Record the demo video, highlighted" />
+            </figure>
+            <h3>Set your goal</h3>
+            <p>Pick one thing for today — typed fresh, or chosen from your weekly checklist.</p>
+            <div class="card-foot mono"><span>Set</span><span class="chip">01</span></div>
+          </article>
+          <article class="card reveal">
+            <figure class="shot">
+              <div class="shot-bar" aria-hidden="true"><i></i><i></i><i></i></div>
+              <img src="assets/screens/start-the-timer.webp" width="1200" height="1200" loading="lazy" decoding="async"
+                   alt="One Thing's Today tab: the goal Record the demo video with a countdown ring showing 15:46 remaining and a 5 day streak" />
+            </figure>
+            <h3>Start the timer</h3>
+            <p>A calm countdown that pauses when you wander off, and counts when you're working.</p>
+            <div class="card-foot mono"><span>Focus</span><span class="chip">02</span></div>
+          </article>
+          <article class="card reveal">
+            <figure class="shot">
+              <div class="shot-bar" aria-hidden="true"><i></i><i></i><i></i></div>
+              <img src="assets/screens/build-your-streak.webp" width="1200" height="1200" loading="lazy" decoding="async"
+                   alt="One Thing's History tab: a 5 day streak and a list of past days marked Done or Failed" />
+            </figure>
+            <h3>Build your streak</h3>
+            <p>Mark it done — honestly — and watch the days add up.</p>
+            <div class="card-foot mono"><span>Streak</span><span class="chip">03</span></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================== 3. PHILOSOPHY (light) -->
+    <section id="philosophy" class="section light" aria-labelledby="phil-title">
+      <div class="bars bars-low" aria-hidden="true">
+        <i style="--h:18%"></i><i style="--h:30%"></i><i style="--h:14%"></i><i style="--h:26%"></i>
+        <i style="--h:38%"></i><i style="--h:20%"></i><i style="--h:32%"></i><i style="--h:16%"></i>
+      </div>
+      <div class="wrap">
+        <div class="section-head">
+          <span class="tag"><span class="num">03</span> · Philosophy</span>
+          <span class="rule" aria-hidden="true"></span>
+        </div>
+
+        <h2 id="phil-title" class="headline" data-reveal>
+          <span class="line">No AI.</span>
+          <span class="line">No noise.</span>
+          <span class="line">Just one thing.</span>
+        </h2>
+
+        <p class="aside aside-corner reveal">
+          No gamified badges. No ten-habit dashboards. No streak-saving tricks you didn't ask for.
+          You choose one goal, you do it, and you tell the truth about whether you did.
+          That's the whole app.
+        </p>
+      </div>
+    </section>
+
+    <!-- ===================================================== 4. DOWNLOAD (dark) -->
+    <section id="download" class="section dark" aria-labelledby="dl-title">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="tag"><span class="num">04</span> · Get started</span>
+          <span class="rule" aria-hidden="true"></span>
+        </div>
+
+        <h2 id="dl-title" class="headline" data-reveal>
+          <span class="line">Available now</span>
+          <span class="line">on Mac.</span>
+        </h2>
+
+        <div class="download reveal">
+          <!-- REPLACE the href with the hosted .dmg URL (e.g. a GitHub Release asset). -->
+          <a class="btn btn-light btn-lg" id="dmg-link" href="downloads/One-Thing-0.1.0.dmg" download>
+            Download One Thing (.dmg) <span class="sq" aria-hidden="true">↓</span>
+          </a>
+          <p class="meta mono">Requires a Mac with Apple silicon (M1 or later)</p>
+
+        </div>
+
+        <!-- Post-install steps: shown permanently, for reference during and after installing. -->
+        <div class="install reveal" aria-labelledby="install-title">
+          <h3 id="install-title" class="install-title">After installing:</h3>
+          <ol class="steps">
+            <li>Drag &ldquo;One Thing&rdquo; into your Applications folder.</li>
+            <li>Open Terminal (press <kbd>Cmd</kbd> + <kbd>Space</kbd>, type &ldquo;Terminal&rdquo;, hit <kbd>Enter</kbd>).</li>
+            <li>
+              Copy and paste this exact line into Terminal, then press <kbd>Enter</kbd>:
+              <div class="code">
+                <code id="xattr-cmd">xattr -dr com.apple.quarantine "/Applications/One Thing.app"</code>
+                <button class="copy" type="button" data-copy="#xattr-cmd" aria-label="Copy the Terminal command">Copy</button>
+              </div>
+            </li>
+            <li>Open One Thing from your Applications folder as normal. It will now open without any warning.</li>
+          </ol>
+          <p class="install-foot">This is a one-time step. You won&rsquo;t need to do it again.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================== 5. WAITLIST (light) -->
+    <section id="waitlist" class="section light" aria-labelledby="wait-title">
+      <div class="bars bars-low" aria-hidden="true">
+        <i style="--h:24%"></i><i style="--h:12%"></i><i style="--h:36%"></i><i style="--h:22%"></i>
+        <i style="--h:44%"></i><i style="--h:28%"></i><i style="--h:18%"></i><i style="--h:34%"></i>
+      </div>
+      <div class="wrap">
+        <div class="section-head">
+          <span class="tag"><span class="num">05</span> · Coming soon</span>
+          <span class="rule" aria-hidden="true"></span>
+        </div>
+
+        <h2 id="wait-title" class="headline" data-reveal>
+          <span class="line">iPhone app</span>
+          <span class="line">launching soon.</span>
+        </h2>
+
+        <div class="waitlist reveal">
+          <p class="aside">Get notified the moment One Thing is available on the App Store.</p>
+          <!-- Formspree: replace YOUR_FORM_ID (also in main.js). -->
+          <form id="waitlist-form" class="form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" novalidate>
+            <label class="sr-only" for="email">Email address</label>
+            <input id="email" name="email" type="email" placeholder="you@example.com" autocomplete="email" required />
+            <!-- Spam trap: real people never fill this in. -->
+            <input type="text" name="_gotcha" class="sr-only" tabindex="-1" autocomplete="off" aria-hidden="true" />
+            <input type="hidden" name="source" value="ios-waitlist" />
+            <button class="btn btn-dark" type="submit">Join Waitlist <span class="sq" aria-hidden="true">→</span></button>
+          </form>
+          <p class="form-status mono" id="form-status" role="status" aria-live="polite"></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ======================================================= DOWNLOAD DISCLAIMER
+       Opened by the .dmg button; only "I Accept" starts the download. -->
+  <dialog class="modal" id="dl-modal" aria-labelledby="dl-modal-title">
+    <div class="modal-inner">
+      <span class="tag"><span class="tag-dot" aria-hidden="true"></span>Heads up</span>
+      <h2 id="dl-modal-title">Before you download...</h2>
+      <p class="lead">My lawyer friend made me put this here.</p>
+      <p>One Thing is an early, independent build — not notarized by Apple yet, not reviewed by anyone official, built by one guy who really likes doing one thing at a time.</p>
+      <p>By downloading, you agree that:</p>
+      <ul>
+        <li>This app might have bugs. I did test it. On my own laptop. Once.</li>
+        <li>You're installing it at your own risk, like a true beta pioneer.</li>
+        <li>If your Mac achieves sentience and refuses to open Slack, that's a feature, not a bug (see: App Lock).</li>
+        <li>I'm not liable for lost productivity, gained productivity, or an identity crisis triggered by a very persistent streak counter.</li>
+      </ul>
+      <p class="sign-off">Read that? Great. Let's go.</p>
+      <div class="modal-actions">
+        <button class="btn btn-dark" type="button" id="dl-accept">I Accept, Let Me Download <span class="sq" aria-hidden="true">↓</span></button>
+        <button class="btn btn-outline" type="button" id="dl-decline">No Thanks</button>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- ======================================================= 7. FOOTER -->
+  <footer class="footer dark">
+    <div class="wrap footer-inner">
+      <a class="wordmark" href="#top" aria-label="One Thing — back to top">
+        <svg class="mark" viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="12" cy="12" r="9.5" fill="none" stroke="currentColor" stroke-width="2" />
+          <path d="M9 7.5h6M12 7.5v9M9 16.5h6" stroke="currentColor" stroke-width="2" fill="none" />
+        </svg>
+        One Thing
+      </a>
+      <a class="mono footer-link" href="mailto:aditya@adsolem.pro">aditya@adsolem.pro</a>
+    </div>
+  </footer>
+
+  <script src="main.js" defer></script>
+</body>
+</html>
