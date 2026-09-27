@@ -18,12 +18,15 @@ python3 -m http.server 8080
 
 Then open http://localhost:8080.
 
-## Placeholders
+## Waitlist
 
-1. **The waitlist form**: create a form at https://formspree.io, then put its ID in
-   two places: `FORMSPREE_ENDPOINT` at the top of `main.js`, and the `action` of
-   `#waitlist-form` in `index.html` (`https://formspree.io/f/YOUR_FORM_ID`).
-2. **Screenshots** (optional): the How it works cards use real app screenshots in
+The iOS waitlist posts to Formspree (`https://formspree.io/f/xjykpaky`, set in
+`main.js` and in the form's `action` in `index.html`). Signups appear in the
+Formspree dashboard under the form's Submissions, and are emailed to you.
+
+## Screenshots
+
+**Screenshots** (optional): the How it works cards use real app screenshots in
    `assets/screens/` (1200×1200 WebP, dark mode, sample data). Replace the files
    to update them.
 

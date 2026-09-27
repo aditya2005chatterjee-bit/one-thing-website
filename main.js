@@ -1,9 +1,8 @@
 // One Thing landing page. No dependencies.
 
-// Formspree endpoint for the iOS waitlist. Replace YOUR_FORM_ID with the ID
-// from your Formspree form (formspree.io → your form → Integration).
-// The form's `action` in index.html uses the same URL.
-const FORMSPREE_ENDPOINT = "https://formspree.io/f/YOUR_FORM_ID";
+// Formspree endpoint for the iOS waitlist (signups: formspree.io → the form →
+// Submissions). The form's `action` in index.html uses the same URL.
+const FORMSPREE_ENDPOINT = "https://formspree.io/f/xjykpaky";
 
 const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
@@ -111,11 +110,6 @@ form?.addEventListener("submit", async (e) => {
     form.email.focus();
     return;
   }
-  if (FORMSPREE_ENDPOINT.includes("YOUR_FORM_ID")) {
-    setStatus("Waitlist isn't connected yet — add your Formspree form ID in main.js.", "err");
-    return;
-  }
-
   const button = form.querySelector("button[type=submit]");
   button.disabled = true;
   setStatus("Joining…");
