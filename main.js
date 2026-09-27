@@ -135,27 +135,32 @@ form?.addEventListener("submit", async (e) => {
 });
 
 /* ---------------------------------------------------------------- download disclaimer
-   The .dmg button opens the disclaimer instead of downloading. Only
-   "I Accept, Let Me Download" starts the download; "No Thanks", Escape and
-   clicking outside the card all just close it. The iOS waitlist isn't gated. */
-const dmgLink = document.getElementById("dmg-link");
+   Both download buttons (.dmg and .exe) open the disclaimer instead of
+   downloading. Only "I Accept, Let Me Download" starts the download of the
+   button that was clicked; "No Thanks", Escape and clicking outside the card
+   all just close it. The iOS waitlist isn't gated. */
+const downloadLinks = [...document.querySelectorAll(".dl-link")];
 const modal = document.getElementById("dl-modal");
 
-if (dmgLink && modal && typeof modal.showModal === "function") {
+if (downloadLinks.length && modal && typeof modal.showModal === "function") {
+  let chosen = null; // the button that opened the disclaimer
   const close = () => {
     if (modal.open) modal.close();
   };
 
-  dmgLink.addEventListener("click", (e) => {
-    e.preventDefault();
-    document.body.classList.add("modal-open");
-    modal.showModal();
-    document.getElementById("dl-decline").focus(); // safe default for Enter
-  });
+  downloadLinks.forEach((link) =>
+    link.addEventListener("click", (e) => {
+      e.preventDefault();
+      chosen = link;
+      document.body.classList.add("modal-open");
+      modal.showModal();
+      document.getElementById("dl-decline").focus(); // safe default for Enter
+    }),
+  );
 
   modal.addEventListener("close", () => {
     document.body.classList.remove("modal-open");
-    dmgLink.focus();
+    chosen?.focus();
   });
 
   // Escape is handled by <dialog> itself: it closes, same as "No Thanks".
@@ -168,14 +173,51 @@ if (dmgLink && modal && typeof modal.showModal === "function") {
   document.getElementById("dl-decline").addEventListener("click", close);
 
   document.getElementById("dl-accept").addEventListener("click", () => {
+    const link = chosen;
     close();
-    // Start the real download from the button's href.
+    if (!link) return;
+    // Start the real download from the clicked button's href.
     const a = document.createElement("a");
-    a.href = dmgLink.href;
+    a.href = link.href;
     a.download = "";
     document.body.appendChild(a);
     a.click();
     a.remove();
+  });
+}
+
+/* ---------------------------------------------------------------- Mac / Windows
+   Pick the visitor's system: its download button is the solid one and its
+   install steps are shown. The Mac | Windows switch changes the steps. */
+const osTabs = [...document.querySelectorAll(".os-switch [role=tab]")];
+if (osTabs.length) {
+  const showSteps = (os, focus = false) => {
+    osTabs.forEach((tab) => {
+      const on = tab.dataset.os === os;
+      tab.setAttribute("aria-selected", String(on));
+      tab.tabIndex = on ? 0 : -1;
+      document.getElementById(tab.getAttribute("aria-controls")).hidden = !on;
+      if (on && focus) tab.focus();
+    });
+  };
+  const detected = /Windows/i.test(navigator.userAgent) ? "windows" : "mac";
+  showSteps(detected);
+  document.querySelectorAll(".dl-option").forEach((opt) => {
+    opt.classList.toggle("other", opt.dataset.os !== detected);
+  });
+  // Put the visitor's own system first.
+  const options = document.querySelector(".dl-options");
+  const mine = options?.querySelector(`.dl-option[data-os="${detected}"]`);
+  if (mine) options.prepend(mine);
+
+  osTabs.forEach((tab, i) => {
+    tab.addEventListener("click", () => showSteps(tab.dataset.os));
+    // Arrow keys move between tabs (standard tablist behaviour).
+    tab.addEventListener("keydown", (e) => {
+      if (e.key !== "ArrowRight" && e.key !== "ArrowLeft") return;
+      const next = osTabs[(i + (e.key === "ArrowRight" ? 1 : osTabs.length - 1)) % osTabs.length];
+      showSteps(next.dataset.os, true);
+    });
   });
 }
 

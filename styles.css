@@ -179,6 +179,22 @@ img, svg { display: block; }
 /* ------------------------------------------------------------------ download */
 .download { margin-top: clamp(48px, 7vw, 88px); max-width: 720px; }
 .meta { margin: 14px 0 0; color: var(--muted); }
+.dl-options { display: flex; flex-wrap: wrap; gap: 20px 28px; }
+.dl-option { min-width: 0; }
+/* The visitor's own system gets the solid button; the other one is outlined. */
+.dl-option.other .btn { background: transparent; color: var(--paper); border-color: rgba(247, 245, 240, 0.45); }
+.dl-option.other .btn:hover { background: rgba(247, 245, 240, 0.08); }
+
+.install-head { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin-bottom: 18px; }
+.install-head .install-title { margin: 0; }
+.os-switch { display: flex; padding: 4px; border-radius: 999px; border: 1px solid var(--line); background: rgba(247, 245, 240, 0.04); }
+.os-switch button {
+  font: inherit; letter-spacing: inherit; text-transform: inherit; cursor: pointer;
+  border: 0; border-radius: 999px; padding: 8px 16px; background: transparent; color: var(--muted);
+  transition: background-color .2s, color .2s;
+}
+.os-switch button[aria-selected="true"] { background: var(--paper); color: var(--ink); }
+.os-switch button:hover:not([aria-selected="true"]) { color: var(--paper); }
 
 /* Post-install steps: same weight as the download button, plain and direct. */
 .install {
@@ -283,6 +299,7 @@ kbd {
   .actions { width: 100%; }
   .actions .btn { flex: 1; justify-content: space-between; }
   .btn-lg { width: 100%; justify-content: space-between; }
+  .dl-options, .dl-option { width: 100%; }
   .form { flex-direction: column; align-items: stretch; border-radius: 16px; padding: 8px; }
   .form input[type="email"] { padding: 0 12px; }
   .form .btn { justify-content: space-between; }

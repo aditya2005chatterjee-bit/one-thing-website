@@ -55,7 +55,7 @@
 
         <div class="hero-foot">
           <div class="actions">
-            <a class="btn btn-dark" href="#download">Download for Mac <span class="sq" aria-hidden="true">↓</span></a>
+            <a class="btn btn-dark" href="#download">Download for Mac &amp; Windows <span class="sq" aria-hidden="true">↓</span></a>
             <a class="btn btn-outline" href="#waitlist">Join iOS Waitlist</a>
           </div>
           <div>
@@ -158,34 +158,64 @@
 
         <h2 id="dl-title" class="headline" data-reveal>
           <span class="line">Available now</span>
-          <span class="line">on Mac.</span>
+          <span class="line">on Mac &amp; Windows.</span>
         </h2>
 
         <div class="download reveal">
-          <!-- Always the newest GitHub Release's One-Thing.dmg (upload new versions under that name). -->
-          <a class="btn btn-light btn-lg" id="dmg-link" href="https://github.com/aditya2005chatterjee-bit/one-thing-website/releases/latest/download/One-Thing.dmg" download>
-            Download One Thing (.dmg) <span class="sq" aria-hidden="true">↓</span>
-          </a>
-          <p class="meta mono">Requires a Mac with Apple silicon (M1 or later)</p>
-
+          <!-- Both links always serve the newest GitHub Release's files
+               (upload new versions as One-Thing.dmg / One-Thing-Setup.exe). -->
+          <div class="dl-options">
+            <div class="dl-option" data-os="mac">
+              <a class="btn btn-light btn-lg dl-link" id="dmg-link" href="https://github.com/aditya2005chatterjee-bit/one-thing-website/releases/latest/download/One-Thing.dmg" download>
+                Download for Mac (.dmg) <span class="sq" aria-hidden="true">↓</span>
+              </a>
+              <p class="meta mono">Apple silicon (M1 or later)</p>
+            </div>
+            <div class="dl-option" data-os="windows">
+              <a class="btn btn-light btn-lg dl-link" id="exe-link" href="https://github.com/aditya2005chatterjee-bit/one-thing-website/releases/latest/download/One-Thing-Setup.exe" download>
+                Download for Windows (.exe) <span class="sq" aria-hidden="true">↓</span>
+              </a>
+              <p class="meta mono">Windows 10 or 11, 64-bit</p>
+            </div>
+          </div>
         </div>
 
-        <!-- Post-install steps: shown permanently, for reference during and after installing. -->
+        <!-- Post-install steps: shown permanently, for reference during and after installing.
+             The visitor's system is selected automatically (main.js). -->
         <div class="install reveal" aria-labelledby="install-title">
-          <h3 id="install-title" class="install-title">After installing:</h3>
-          <ol class="steps">
-            <li>Drag &ldquo;One Thing&rdquo; into your Applications folder.</li>
-            <li>Open Terminal (press <kbd>Cmd</kbd> + <kbd>Space</kbd>, type &ldquo;Terminal&rdquo;, hit <kbd>Enter</kbd>).</li>
-            <li>
-              Copy and paste this exact line into Terminal, then press <kbd>Enter</kbd>:
-              <div class="code">
-                <code id="xattr-cmd">xattr -dr com.apple.quarantine "/Applications/One Thing.app"</code>
-                <button class="copy" type="button" data-copy="#xattr-cmd" aria-label="Copy the Terminal command">Copy</button>
-              </div>
-            </li>
-            <li>Open One Thing from your Applications folder as normal. It will now open without any warning.</li>
-          </ol>
-          <p class="install-foot">This is a one-time step. You won&rsquo;t need to do it again.</p>
+          <div class="install-head">
+            <h3 id="install-title" class="install-title">After installing:</h3>
+            <div class="os-switch mono" role="tablist" aria-label="Show installation steps for">
+              <button type="button" role="tab" id="tab-mac" data-os="mac" aria-controls="steps-mac" aria-selected="true">Mac</button>
+              <button type="button" role="tab" id="tab-windows" data-os="windows" aria-controls="steps-windows" aria-selected="false" tabindex="-1">Windows</button>
+            </div>
+          </div>
+
+          <div id="steps-mac" role="tabpanel" aria-labelledby="tab-mac">
+            <ol class="steps">
+              <li>Drag &ldquo;One Thing&rdquo; into your Applications folder.</li>
+              <li>Open Terminal (press <kbd>Cmd</kbd> + <kbd>Space</kbd>, type &ldquo;Terminal&rdquo;, hit <kbd>Enter</kbd>).</li>
+              <li>
+                Copy and paste this exact line into Terminal, then press <kbd>Enter</kbd>:
+                <div class="code">
+                  <code id="xattr-cmd">xattr -dr com.apple.quarantine "/Applications/One Thing.app"</code>
+                  <button class="copy" type="button" data-copy="#xattr-cmd" aria-label="Copy the Terminal command">Copy</button>
+                </div>
+              </li>
+              <li>Open One Thing from your Applications folder as normal. It will now open without any warning.</li>
+            </ol>
+            <p class="install-foot">This is a one-time step. You won&rsquo;t need to do it again.</p>
+          </div>
+
+          <div id="steps-windows" role="tabpanel" aria-labelledby="tab-windows" hidden>
+            <ol class="steps">
+              <li>Open &ldquo;One-Thing-Setup.exe&rdquo; from your Downloads folder.</li>
+              <li>Windows shows a blue box: <strong>&ldquo;Windows protected your PC&rdquo;</strong>, with only a <strong>Don&rsquo;t run</strong> button. This is expected for a new app that isn&rsquo;t signed yet.</li>
+              <li>Click <strong>More info</strong> under the message, then click <strong>Run anyway</strong>.</li>
+              <li>Follow the installer: choose where to install, then <strong>Next</strong> &rarr; <strong>Install</strong> &rarr; <strong>Finish</strong>. Open One Thing from the Start menu as normal.</li>
+            </ol>
+            <p class="install-foot">This is a one-time step. You won&rsquo;t need to do it again. Using Microsoft Edge? If it flags the download, choose <strong>&middot;&middot;&middot;</strong> &rarr; <strong>Keep</strong> &rarr; <strong>Show more</strong> &rarr; <strong>Keep anyway</strong>. Focus Apps and the notch timer are Mac-only for now.</p>
+          </div>
         </div>
       </div>
     </section>
