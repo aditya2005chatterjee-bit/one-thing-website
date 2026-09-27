@@ -57,7 +57,15 @@
             <a class="btn btn-dark" href="#download">Download for Mac <span class="sq" aria-hidden="true">↓</span></a>
             <a class="btn btn-outline" href="#waitlist">Join iOS Waitlist</a>
           </div>
-          <p class="aside">A focus app that removes decision fatigue. One goal. One timer. One streak.</p>
+          <div>
+            <p class="aside">A focus app that removes decision fatigue. One goal. One timer. One streak.</p>
+            <!-- A way into /features/: press 1 anywhere ("one thing"), or tap on touch screens. -->
+            <a class="tour-hint" href="/features/" aria-label="Take the feature tour (keyboard shortcut: 1)">
+              <kbd class="keycap" aria-hidden="true">1</kbd>
+              <span class="hint-keys">Press 1 for the full tour</span>
+              <span class="hint-touch">Tap for the full tour</span>
+            </a>
+          </div>
         </div>
       </div>
     </section>
@@ -87,7 +95,7 @@
             </figure>
             <h3>Set your goal</h3>
             <p>Pick one thing for today — typed fresh, or chosen from your weekly checklist.</p>
-            <div class="card-foot mono"><span>Set</span><span class="chip">01</span></div>
+            <div class="card-foot mono"><a class="explore" href="/features/#goal">Explore →</a><span class="chip">01</span></div>
           </article>
           <article class="card reveal">
             <figure class="shot">
@@ -97,7 +105,7 @@
             </figure>
             <h3>Start the timer</h3>
             <p>A calm countdown that pauses when you wander off, and counts when you're working.</p>
-            <div class="card-foot mono"><span>Focus</span><span class="chip">02</span></div>
+            <div class="card-foot mono"><a class="explore" href="/features/#timer">Explore →</a><span class="chip">02</span></div>
           </article>
           <article class="card reveal">
             <figure class="shot">
@@ -107,7 +115,7 @@
             </figure>
             <h3>Build your streak</h3>
             <p>Mark it done — honestly — and watch the days add up.</p>
-            <div class="card-foot mono"><span>Streak</span><span class="chip">03</span></div>
+            <div class="card-foot mono"><a class="explore" href="/features/#streak">Explore →</a><span class="chip">03</span></div>
           </article>
         </div>
       </div>
@@ -248,7 +256,10 @@
         </svg>
         One Thing
       </a>
-      <a class="mono footer-link" href="mailto:aditya@adsolem.pro">aditya@adsolem.pro</a>
+      <div class="footer-links">
+        <a class="mono footer-link" href="/features/">Feature tour</a>
+        <a class="mono footer-link" href="mailto:aditya@adsolem.pro">aditya@adsolem.pro</a>
+      </div>
     </div>
   </footer>
 

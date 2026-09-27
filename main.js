@@ -178,3 +178,28 @@ if (dmgLink && modal && typeof modal.showModal === "function") {
     a.remove();
   });
 }
+
+/* ---------------------------------------------------------------- the tour: press 1
+   On the home page, pressing 1 ("one thing") anywhere opens the feature tour.
+   Ignored while typing in a field, with modifier keys, or while a dialog is open. */
+if (document.body.dataset.page !== "features") {
+  document.addEventListener("keydown", (e) => {
+    if (e.key !== "1" || e.repeat || e.metaKey || e.ctrlKey || e.altKey) return;
+    if (e.target.closest?.("input, textarea, select, [contenteditable]")) return;
+    if (document.querySelector("dialog[open]")) return;
+    const keycap = document.querySelector(".keycap");
+    keycap?.classList.add("pressed");
+    setTimeout(() => (window.location.href = "/features/"), reduceMotion ? 0 : 140);
+  });
+}
+
+/* ---------------------------------------------------------------- looping clips
+   Respect "reduce motion": don't auto-play the looping screen recordings;
+   show controls so they can still be played on request. */
+if (reduceMotion) {
+  document.querySelectorAll("video[autoplay]").forEach((v) => {
+    v.removeAttribute("autoplay");
+    v.pause();
+    v.controls = true;
+  });
+}

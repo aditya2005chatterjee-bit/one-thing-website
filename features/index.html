@@ -1,0 +1,360 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>The tour — One Thing</title>
+  <meta name="description" content="Every feature in One Thing: one daily goal, a weekly checklist, a calm focus timer, an honest streak, and Mac extras like the notch timer and App Lock." />
+  <meta name="theme-color" content="#F7F5F0" />
+  <meta property="og:title" content="The tour — One Thing" />
+  <meta property="og:description" content="Every feature in One Thing, in one place." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" type="image/png" href="/assets/favicon-64.png" />
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+<body data-page="features">
+  <!-- ======================================================= NAV -->
+  <header class="nav">
+    <a class="wordmark" href="/" aria-label="One Thing — home">
+      <svg class="mark" viewBox="0 0 24 24" aria-hidden="true">
+        <circle cx="12" cy="12" r="9.5" fill="none" stroke="currentColor" stroke-width="2" />
+        <path d="M9 7.5h6M12 7.5v9M9 16.5h6" stroke="currentColor" stroke-width="2" fill="none" />
+      </svg>
+      One Thing
+    </a>
+    <nav class="nav-links mono" aria-label="Tour sections">
+      <a href="#loop">Daily loop</a>
+      <a href="#the-week">The week</a>
+      <a href="#mac">On your Mac</a>
+      <a href="/">Home</a>
+    </nav>
+    <a class="btn btn-dark btn-sm" href="/#download">Download <span class="sq" aria-hidden="true">↓</span></a>
+  </header>
+
+  <main id="top">
+    <!-- ===================================================== HERO + VIDEO (light) -->
+    <section class="section light tour-hero" aria-labelledby="tour-title">
+      <div class="bars" aria-hidden="true">
+        <i style="--h:30%"></i><i style="--h:44%"></i><i style="--h:22%"></i><i style="--h:58%"></i>
+        <i style="--h:36%"></i><i style="--h:26%"></i><i style="--h:50%"></i><i style="--h:32%"></i>
+      </div>
+      <div class="wrap">
+        <span class="tag"><span class="tag-dot" aria-hidden="true"></span>The tour</span>
+
+        <div class="tour-head">
+          <h1 id="tour-title" class="headline" data-reveal="hero">
+            <span class="line">Everything</span>
+            <span class="line">one thing does.</span>
+          </h1>
+          <p class="aside">Every feature in the free app, in one place. No account, no subscription, nothing to set up.</p>
+        </div>
+
+        <!-- Demo: 39 s, 1080p, no audio; subtitles are part of the picture. -->
+        <figure class="video reveal" id="demo">
+          <video src="/assets/video/one-thing-demo.mp4" poster="/assets/video/one-thing-demo-poster.webp"
+                 controls playsinline preload="metadata" width="1920" height="1080"
+                 aria-label="A 39-second demo of One Thing: picking today's goal from the week, starting the focus timer, the timer by the notch, a timer-friendly app, App Lock pulling you back from Safari, marking the day done, and the streak in History."></video>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ===================================================== INDEX (dark) -->
+    <section class="section dark" aria-labelledby="index-title">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="tag"><span class="num">01</span> · Index</span>
+          <span class="rule" aria-hidden="true"></span>
+        </div>
+        <h2 id="index-title" class="headline" data-reveal>
+          <span class="line">Eleven features.</span>
+          <span class="line">All of them free.</span>
+        </h2>
+
+        <ol class="index">
+          <li><a href="#goal"><span class="num">01</span><span class="t">One goal a day</span><span class="where mono">Mac · iPhone</span><span class="go" aria-hidden="true">→</span></a></li>
+          <li><a href="#schedule"><span class="num">02</span><span class="t">Schedule it</span><span class="where mono">Mac · iPhone</span><span class="go" aria-hidden="true">→</span></a></li>
+          <li><a href="#timer"><span class="num">03</span><span class="t">A calm focus timer</span><span class="where mono">Mac · iPhone</span><span class="go" aria-hidden="true">→</span></a></li>
+          <li><a href="#streak"><span class="num">04</span><span class="t">Done, or not. Honestly.</span><span class="where mono">Mac · iPhone</span><span class="go" aria-hidden="true">→</span></a></li>
+          <li><a href="#week"><span class="num">05</span><span class="t">A weekly checklist</span><span class="where mono">Mac · iPhone</span><span class="go" aria-hidden="true">→</span></a></li>
+          <li><a href="#history"><span class="num">06</span><span class="t">Your history</span><span class="where mono">Mac · iPhone</span><span class="go" aria-hidden="true">→</span></a></li>
+          <li><a href="#timer-apps"><span class="num">07</span><span class="t">Timer-friendly apps</span><span class="where mono">Mac</span><span class="go" aria-hidden="true">→</span></a></li>
+          <li><a href="#notch"><span class="num">08</span><span class="t">Timer by the notch</span><span class="where mono">Mac</span><span class="go" aria-hidden="true">→</span></a></li>
+          <li><a href="#app-lock"><span class="num">09</span><span class="t">App Lock</span><span class="where mono">Mac · optional</span><span class="go" aria-hidden="true">→</span></a></li>
+          <li><a href="#themes"><span class="num">10</span><span class="t">Light, dark or system</span><span class="where mono">Mac · iPhone</span><span class="go" aria-hidden="true">→</span></a></li>
+          <li><a href="#private"><span class="num">11</span><span class="t">Private by default</span><span class="where mono">Mac · iPhone</span><span class="go" aria-hidden="true">→</span></a></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===================================================== THE DAILY LOOP (light) -->
+    <section id="loop" class="section light" aria-labelledby="loop-title">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="tag"><span class="num">02</span> · The daily loop</span>
+          <span class="rule" aria-hidden="true"></span>
+        </div>
+        <h2 id="loop-title" class="headline" data-reveal>
+          <span class="line">Pick it. Plan it.</span>
+          <span class="line">Do it.</span>
+        </h2>
+
+        <div class="features">
+          <article class="feature reveal" id="goal">
+            <div class="fcopy">
+              <span class="fnum mono">01</span>
+              <h3>One goal a day</h3>
+              <p>Every day starts with one question: what's today's one thing? Type something fresh, or pick a step from your weekly checklist. Just one — there's no to-do list to hide behind.</p>
+              <ul><li>An independent task, or a step from your week</li><li>One goal per day, by design</li></ul>
+            </div>
+            <figure class="shot">
+              <div class="shot-bar" aria-hidden="true"><i></i><i></i><i></i></div>
+              <img src="/assets/screens/today-options.webp" width="1200" height="1200" loading="lazy" decoding="async"
+                   alt="Today tab asking What's today's one thing?, with buttons Do an independent task and Choose from weekly goal" />
+            </figure>
+          </article>
+
+          <article class="feature reveal" id="schedule">
+            <div class="fcopy">
+              <span class="fnum mono">02</span>
+              <h3>Schedule it</h3>
+              <p>Decide when you'll actually do it: today, tomorrow or the day after, down to the minute. Committing to a time is half the work.</p>
+              <ul><li>Any time in the next 48 hours</li><li>A reminder at that time on iPhone</li></ul>
+            </div>
+            <figure class="shot">
+              <div class="shot-bar" aria-hidden="true"><i></i><i></i><i></i></div>
+              <img src="/assets/screens/schedule.webp" width="1200" height="1200" loading="lazy" decoding="async"
+                   alt="Scheduling Outline chapter three: day choices Today, Tomorrow and Tuesday, a time of 8:00 PM, and a Schedule button" />
+            </figure>
+          </article>
+
+          <article class="feature reveal" id="timer">
+            <div class="fcopy">
+              <span class="fnum mono">03</span>
+              <h3>A calm focus timer</h3>
+              <p>Pick a duration and start. The ring empties as you work. Wander off to another app and it pauses after a three-second grace period; come back and it carries on.</p>
+              <ul><li>Pauses when you leave, resumes when you return</li><li>+5 min when you need a little longer</li><li>Remembers where it was, even after a restart</li></ul>
+            </div>
+            <figure class="shot">
+              <div class="shot-bar" aria-hidden="true"><i></i><i></i><i></i></div>
+              <img src="/assets/screens/start-the-timer.webp" width="1200" height="1200" loading="lazy" decoding="async"
+                   alt="Focus timer for Record the demo video, with a countdown ring at 15:46 remaining and a +5 min button" />
+            </figure>
+          </article>
+
+          <article class="feature reveal" id="streak">
+            <div class="fcopy">
+              <span class="fnum mono">04</span>
+              <h3>Done, or not. Honestly.</h3>
+              <p>When time's up, you mark it Done or Failed. No partial credit, no auto-complete. Your streak counts days in a row you got it done — a failed or skipped day starts it again.</p>
+              <ul><li>Two buttons, one honest answer</li><li>A streak that means something</li></ul>
+            </div>
+            <div class="illus illus-streak" role="img" aria-label="A week of days: six done and one failed, with a streak of 5">
+              <div class="streak-num"><strong>5</strong> day streak</div>
+              <div class="days">
+                <span class="day done"><i></i>M</span><span class="day failed"><i></i>T</span>
+                <span class="day done"><i></i>W</span><span class="day done"><i></i>T</span>
+                <span class="day done"><i></i>F</span><span class="day done"><i></i>S</span>
+                <span class="day done today"><i></i>S</span>
+              </div>
+              <div class="illus-buttons"><span class="ib ib-solid">Mark Done</span><span class="ib">Mark Failed</span></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================== THE WEEK (dark) -->
+    <section id="the-week" class="section dark" aria-labelledby="week-title">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="tag"><span class="num">03</span> · The week</span>
+          <span class="rule" aria-hidden="true"></span>
+        </div>
+        <h2 id="week-title" class="headline" data-reveal>
+          <span class="line">Plan the week.</span>
+          <span class="line">Live the day.</span>
+        </h2>
+
+        <div class="features">
+          <article class="feature reveal" id="week">
+            <div class="fcopy">
+              <span class="fnum mono">05</span>
+              <h3>A weekly checklist</h3>
+              <p>Set a goal for the week and break it into steps. Each day, tap one step to make it today's one thing — finished steps tick themselves off. Rather not plan the week? Just do daily goals.</p>
+              <ul><li>Add, edit and remove steps as you go</li><li>See how far you are: 2 of 5 done this week</li><li>Daily-only weeks if you prefer</li></ul>
+            </div>
+            <figure class="shot">
+              <div class="shot-bar" aria-hidden="true"><i></i><i></i><i></i></div>
+              <img src="/assets/screens/set-your-goal.webp" width="1200" height="1200" loading="lazy" decoding="async"
+                   alt="Weekly checklist for Ship the One Thing beta: two steps done, Record the demo video marked as today" />
+            </figure>
+          </article>
+
+          <article class="feature reveal" id="history">
+            <div class="fcopy">
+              <span class="fnum mono">06</span>
+              <h3>Your history</h3>
+              <p>Every day you log lands in History: the date, what you did, and whether you did it. A plain record, newest first — no charts to perform for.</p>
+              <ul><li>Done and Failed, side by side</li><li>Your streak, front and centre</li></ul>
+            </div>
+            <figure class="shot">
+              <div class="shot-bar" aria-hidden="true"><i></i><i></i><i></i></div>
+              <img src="/assets/screens/build-your-streak.webp" width="1200" height="1200" loading="lazy" decoding="async"
+                   alt="History tab with a 5 day streak and a list of past days marked Done or Failed" />
+            </figure>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================== ON YOUR MAC (light) -->
+    <section id="mac" class="section light" aria-labelledby="mac-title">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="tag"><span class="num">04</span> · On your Mac</span>
+          <span class="rule" aria-hidden="true"></span>
+        </div>
+        <h2 id="mac-title" class="headline" data-reveal>
+          <span class="line">Made for</span>
+          <span class="line">the desktop.</span>
+        </h2>
+
+        <div class="features">
+          <article class="feature reveal" id="timer-apps">
+            <div class="fcopy">
+              <span class="fnum mono">07 · Mac</span>
+              <h3>Timer-friendly apps</h3>
+              <p>Some work happens in other apps. Choose the ones where your timer should keep counting — your editor, your design tool — and switch to them freely. Anything else still pauses it.</p>
+              <ul><li>Pick from your installed apps</li><li>No permissions needed</li></ul>
+            </div>
+            <div class="illus illus-apps" role="img" aria-label="Visual Studio Code and Figma keep the timer counting; Slack pauses it">
+              <div class="app-row"><span class="app-ico" style="--c:#2F7FC1">VS</span><span class="app-name">Visual Studio Code</span><span class="state on">Counting</span></div>
+              <div class="app-row"><span class="app-ico" style="--c:#A259FF">F</span><span class="app-name">Figma</span><span class="state on">Counting</span></div>
+              <div class="app-row"><span class="app-ico" style="--c:#4A154B">S</span><span class="app-name">Slack</span><span class="state off">‖ Paused</span></div>
+            </div>
+          </article>
+
+          <article class="feature reveal" id="notch">
+            <div class="fcopy">
+              <span class="fnum mono">08 · Mac</span>
+              <h3>Timer by the notch</h3>
+              <p>While the timer runs, a small black pill wraps around the notch at the top of your screen — a progress ring on one side, the time left on the other. Visible from any app. Click it to jump back.</p>
+              <ul><li>Never steals focus</li><li>Turn it off in Settings</li></ul>
+            </div>
+            <div class="illus illus-notch" role="img" aria-label="The top of a Mac screen with the timer pill around the notch showing 16:40">
+              <div class="menubar">
+                <img src="/assets/screens/notch.webp" width="392" height="34" alt="" />
+              </div>
+              <div class="desk"><span class="mono">Your work, in any app</span></div>
+            </div>
+          </article>
+
+          <article class="feature reveal" id="app-lock">
+            <div class="fcopy">
+              <span class="fnum mono">09 · Mac · optional</span>
+              <h3>App Lock</h3>
+              <p>Off unless you turn it on. Pick apps to lock; open one before today's goal is done and One Thing comes straight back to the front. Mark the day done and it steps aside until tomorrow.</p>
+              <ul><li>Only checks which app is in front — nothing inside it</li><li>No permissions, and one click to turn off</li></ul>
+            </div>
+            <figure class="clip">
+              <!-- Short loop: TextEdit → opening Safari (locked) → One Thing comes back. -->
+              <video src="/assets/video/app-lock.mp4" poster="/assets/video/app-lock-poster.webp"
+                     autoplay muted loop playsinline preload="metadata" width="1280" height="720"
+                     aria-label="Screen recording: Safari is opened while today's goal isn't done, and One Thing comes straight back to the front."></video>
+            </figure>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================== QUIET BY DESIGN (dark) -->
+    <section class="section dark" aria-labelledby="quiet-title">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="tag"><span class="num">05</span> · Quiet by design</span>
+          <span class="rule" aria-hidden="true"></span>
+        </div>
+        <h2 id="quiet-title" class="headline" data-reveal>
+          <span class="line">No account.</span>
+          <span class="line">No noise.</span>
+        </h2>
+
+        <div class="features">
+          <article class="feature reveal" id="themes">
+            <div class="fcopy">
+              <span class="fnum mono">10</span>
+              <h3>Light, dark or system</h3>
+              <p>Black and white, nothing else competing for attention. Follows your system's appearance, or choose light or dark yourself.</p>
+            </div>
+            <div class="illus illus-theme" role="img" aria-label="The appearance setting with System, Light and Dark options, beside a light and a dark preview">
+              <div class="theme-previews">
+                <div class="tp tp-light"><strong>5</strong><span>day streak</span></div>
+                <div class="tp tp-dark"><strong>5</strong><span>day streak</span></div>
+              </div>
+              <div class="seg mono"><span class="on">System</span><span>Light</span><span>Dark</span></div>
+            </div>
+          </article>
+
+          <article class="feature reveal" id="private">
+            <div class="fcopy">
+              <span class="fnum mono">11</span>
+              <h3>Private by default</h3>
+              <p>There's nothing to sign up for. Your goals, streak and history live on your device and nowhere else — no account, no cloud, no analytics.</p>
+            </div>
+            <div class="illus illus-private" role="img" aria-label="No account, no cloud, no analytics: your data stays on this device">
+              <ul class="checks">
+                <li><span>No account</span><em class="mono">✓</em></li>
+                <li><span>No cloud sync</span><em class="mono">✓</em></li>
+                <li><span>No analytics</span><em class="mono">✓</em></li>
+                <li><span>Stays on this device</span><em class="mono">✓</em></li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================== CTA (light) -->
+    <section class="section light tour-cta" aria-labelledby="cta-title">
+      <div class="bars bars-low" aria-hidden="true">
+        <i style="--h:20%"></i><i style="--h:34%"></i><i style="--h:16%"></i><i style="--h:42%"></i>
+        <i style="--h:26%"></i><i style="--h:38%"></i><i style="--h:18%"></i><i style="--h:30%"></i>
+      </div>
+      <div class="wrap">
+        <div class="section-head">
+          <span class="tag"><span class="num">06</span> · Try it</span>
+          <span class="rule" aria-hidden="true"></span>
+        </div>
+        <h2 id="cta-title" class="headline" data-reveal>
+          <span class="line">Do one thing.</span>
+          <span class="line">Starting today.</span>
+        </h2>
+        <div class="actions cta-actions reveal">
+          <a class="btn btn-dark" href="/#download">Download for Mac <span class="sq" aria-hidden="true">↓</span></a>
+          <a class="btn btn-outline" href="/">Back to home</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer dark">
+    <div class="wrap footer-inner">
+      <a class="wordmark" href="/" aria-label="One Thing — home">
+        <svg class="mark" viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="12" cy="12" r="9.5" fill="none" stroke="currentColor" stroke-width="2" />
+          <path d="M9 7.5h6M12 7.5v9M9 16.5h6" stroke="currentColor" stroke-width="2" fill="none" />
+        </svg>
+        One Thing
+      </a>
+      <a class="mono footer-link" href="mailto:aditya@adsolem.pro">aditya@adsolem.pro</a>
+    </div>
+  </footer>
+
+  <script src="/main.js" defer></script>
+</body>
+</html>
